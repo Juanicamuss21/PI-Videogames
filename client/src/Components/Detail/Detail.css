@@ -1,0 +1,156 @@
+.total-div{   
+   text-align: center;
+}
+
+.cd-div{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: wheat;
+    border-radius: 15px;
+    width: 75%;
+    height: 35rem;
+    margin: 4rem auto 6rem auto;
+    background-color: #23263b;
+    /* background-color: rgba(0, 0, 0, 0.3);  */
+    box-shadow: 10px 10px 10px #000;  
+    
+}
+
+.title-img{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.title-detail{
+    /* margin-top: 2px;
+    padding-top: 21px; */
+    font-weight: 300; 
+    width: 25rem;
+    margin-left: 1rem;
+}
+
+.description{
+    /* position: relative;
+    right: 15rem;
+    font-weight: 300;
+    outline: 3px solid red; */
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    /* background: #2c2c6c; */
+    /* background: rgba(0, 0, 0, 0.3); */
+    /* color: #4db5ff; */
+    color: wheat;
+    gap: 1.5rem;
+    
+}
+
+.description p{
+    /* margin-top: 1.6rem; */
+    margin: 0;
+    height: 1.5rem;
+   
+}
+
+ .description__item h2{
+    margin-top: -5px;
+}  
+
+.description__item{
+    display: flex;
+    column-gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.rating-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    height: 3rem;
+    margin-top: 1rem;
+} 
+
+.img-detail{
+    width: 80%;
+    height: 270px;
+    border-radius: 1rem;
+    border: 1px solid #000;
+}
+
+.p-loading{
+    font-size: 20px;
+    color: white;
+    margin: 12rem auto 20rem auto; 
+}
+
+.rating{
+    margin-top: 5px;
+    color: #ffff74;;
+}
+
+@media screen and (max-width: 1024px) {
+    .cd-div{
+        width: 90%; 
+    }
+
+    .img-detail{
+        width: 80%;
+        height: 200px;
+        
+    }
+
+
+}
+
+/* Media queries (small devices)  */
+
+@media screen and (max-width: 600px) {
+    .cd-div{
+        width: 90%;
+        flex-direction: column;
+        
+    }
+
+    .description{
+       gap: .4rem;
+       margin-left: 10px;
+    }
+
+    .img-detail{
+        width: 70%;
+        height: 180px;
+        margin-top: -5px;
+    }
+
+    .rating-div{
+        margin-top: 0;
+        margin-bottom: 10px;
+        font-size: 14px;
+    } 
+
+    /* .description__item{
+       
+    } */
+
+    .description__item h2{
+        font-size: 1.3rem;
+        margin-top: -4px;
+    }  
+
+    /* .title-img{
+     
+       
+    } */
+
+    .title-detail{
+        /* margin-top: 2px;
+        padding-top: 21px; */
+        font-size: 1.6rem;
+    }
+
+   
+}

@@ -1,0 +1,150 @@
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    /* height: 60rem; */
+    gap: 1.2rem;
+    margin: 4.5rem auto 8rem auto;
+    background: rgba(0, 0, 0, 0.4);
+    padding-top: 2rem;
+    border-radius: 2rem;
+    color: #fff;
+    
+}
+
+.form__input{
+    
+    width: 50%;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    background: transparent;
+    border: 2px solid rgba(77, 181, 255,0.4);
+    resize: none;
+    color: #fff;
+}
+
+.form__input:focus{
+
+    border-color: none;
+}
+
+select{
+    width: 50%;
+    padding: 0.90rem 1.5rem;
+    border-radius: 0.5rem;
+    background: transparent;
+    color: #fff;
+    border: 2px solid rgba(77, 181, 255,0.4);
+    resize: none;
+    
+    cursor: pointer;
+    
+}
+
+.option-create{
+    color: #000;
+}
+
+.genres__selected{
+    display: flex;
+    justify-content: center;
+    width: 30rem;
+    gap: 3.2rem;
+    flex-wrap: wrap;
+}
+
+.genre-p{
+    display: flex;
+    gap: 0.40rem;
+    justify-content: center;
+    align-items: center;
+    width: 7rem;
+}
+
+.genre-p button{
+    background: transparent;
+    border-radius: 4px;
+    padding: 2px 6px;
+    color: #4db5ff;
+    border: 1px solid #4db5ff;
+    cursor: pointer;
+}
+
+.checkbox{
+    display: flex;
+    gap: 2rem;
+    margin: 1rem 0;
+}
+
+.checkbox-label{
+    display: flex;
+    gap: 3px;
+    
+}
+
+.errors{
+    color: red;
+}
+
+.btn-form{
+    width: max-content;
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    border: 1px solid #4db5ff;
+    transition: all 400ms ease;
+    margin-bottom: 2rem;
+}
+
+.btn-form:hover{
+    background: #fff;
+    color: #1f1f38;
+    border-color: transparent;
+}
+
+.btn-primary{
+    background: #4db5ff;
+    color: #1f1f38;
+}
+
+
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  appearance: none;
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+@media screen and (max-width: 1024px) {
+form{
+       width: 70%;
+    }
+
+    select{
+        width: 60%;
+        
+    }
+}
+
+/* Media queries (small devices)  */
+
+@media screen and (max-width: 600px) {
+    form{
+       width: 90%;
+    }
+
+    .form__input{
+        width: 70%;
+    }
+
+    select{
+        width: 85%;
+        
+    }
+    
+}
+
+

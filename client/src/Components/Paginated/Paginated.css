@@ -1,0 +1,22 @@
+.bt-paginated{
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.btn-paginated{
+    cursor: pointer;
+    background-color: transparent;
+    padding: 5px 8px 5px 8px;
+    color: wheat;
+    border-radius: 0.50rem;
+    border: 1.5px solid #4db5ff;
+    margin: 1.5rem 0 5rem 0;
+    font-size: 15px;
+    
+}
+
+button:focus{
+    background-color: #4db5ff;
+    color: black;
+}

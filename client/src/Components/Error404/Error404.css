@@ -1,0 +1,10 @@
+.div-error{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    outline: 3px solid red;
+    height: 100vh;
+    gap: 1rem;
+}
+

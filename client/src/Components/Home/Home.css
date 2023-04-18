@@ -1,0 +1,18 @@
+body{
+    background: #1f1f38;
+}
+
+.div-home{
+    /* background: url(../../Assets/wallpaperflare.com_wallpaper.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%; */ 
+    /* background: #2c2c6c; */
+    text-align: center;
+    color: #fff;
+}
+
+.div-home p{
+    margin: 10rem;
+    margin-bottom: 20rem;
+} 
