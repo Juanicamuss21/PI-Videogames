@@ -4,7 +4,7 @@ import {toast} from "react-hot-toast";
 export function getAllVideoGames(){
     return function(dispatch){
         console.log(axios)
-        axios.get("http://localhost:3001/videogames")
+        axios.get("/videogames")
         .then((res) => res.data)
         .then((res) => {
             return dispatch({type: "GET_ALL_VIDEOGAMES", payload: res})
@@ -17,7 +17,7 @@ export function getAllVideoGames(){
 export function getAllGenres(){
     return async function(dispatch){
         try{
-            const genres = await axios.get("http://localhost:3001/genres")
+            const genres = await axios.get("/genres")
 
             return dispatch({type: "GET_ALL_GENRES", payload: genres.data})
         }catch(error){
@@ -29,7 +29,7 @@ export function getAllGenres(){
 export function getVideoGameByName(name){
     return async function(dispatch){
         try{
-            const videoGameName = await axios.get(`http://localhost:3001/videogames?name=${name}`)
+            const videoGameName = await axios.get(`/videogames?name=${name}`)
             return dispatch({type: "GET_VIDEOGAME_BY_NAME", payload: videoGameName.data})
         }catch(error){
             console.log(error)
@@ -42,7 +42,7 @@ export function postVideoGame(post){
     console.log(post)
     return async function(dispatch){
         try{
-            const response = await axios.post("http://localhost:3001/videogames", post)         
+            const response = await axios.post("/videogames", post)         
             toast.success("VideoGame creado correctamente")
             return dispatch({type: "POST_VIDEOGAME", payload: response.data})         
         }catch(error){
@@ -54,7 +54,7 @@ export function postVideoGame(post){
 export function deleteVideoGame(id){
     return async function(dispatch){
         try{          
-            await axios.get(`http://localhost:3001/delete/${id}`)          
+            await axios.get(`/delete/${id}`)          
             return dispatch({type: "DELETE_VIDEOGAME", payload: id})
         }catch(error){
             console.log(error.message)
@@ -93,7 +93,7 @@ export function filterByCreated(value){
 export function getDetail(id){
     return async function(dispatch){
         try{
-            const detail = await axios.get(`http://localhost:3001/videogames/${id}`)
+            const detail = await axios.get(`/videogames/${id}`)
             return dispatch({type: "GET_DETAIL", payload: detail.data})
         }catch(error){
             console.log(error.message)

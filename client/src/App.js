@@ -6,6 +6,8 @@ import Footer from './Components/Footer/Footer';
 import Detail from './Components/Detail/Detail';
 import CreateVideoGame from './Components/CreateVideoGame/CreateVideoGame';
 // import Error404 from './Components/Error404/Error404';
+import axios from 'axios';
+axios.defaults.baseURL = 'http://localhost:3001/';
 
 function App() {
   return (
