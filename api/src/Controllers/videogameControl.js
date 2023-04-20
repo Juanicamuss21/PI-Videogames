@@ -3,15 +3,15 @@ const {Videogame, Genre} = require('../db.js')
 const {APY_KEY} = process.env;
 
 const getInfoApi = async () => {
-    const apiVideogames = await axios.get(`https://api.rawg.io/api/games?key=d4c41d06d8cd4ea5b1a5cacefa0b8d5a`);
+    const apiVideogames = await axios.get(`https://api.rawg.io/api/games?key=${APY_KEY}`);
 
-    const apiVideogames2 = await axios.get(`https://api.rawg.io/api/games?key=d4c41d06d8cd4ea5b1a5cacefa0b8d5a&page=2`);
+    const apiVideogames2 = await axios.get(`https://api.rawg.io/api/games?key=${APY_KEY}&page=2`);
 
-    const apiVideogames3 = await axios.get(`https://api.rawg.io/api/games?key=d4c41d06d8cd4ea5b1a5cacefa0b8d5a&page=3`)
+    const apiVideogames3 = await axios.get(`https://api.rawg.io/api/games?key=${APY_KEY}&page=3`)
 
-    const apiVideogames4 = await axios.get(`https://api.rawg.io/api/games?key=d4c41d06d8cd4ea5b1a5cacefa0b8d5a&page=4`)
+    const apiVideogames4 = await axios.get(`https://api.rawg.io/api/games?key=${APY_KEY}&page=4`)
 
-    const apiVideogames5 = await axios.get(`https://api.rawg.io/api/games?key=d4c41d06d8cd4ea5b1a5cacefa0b8d5a&page=5`)
+    const apiVideogames5 = await axios.get(`https://api.rawg.io/api/games?key=${APY_KEY}&page=5`)
 
     const apiVideogamesTotal = apiVideogames.data.results.concat(apiVideogames2.data.results).concat(apiVideogames3.data.results).concat(apiVideogames4.data.results).concat(apiVideogames5.data.results)
 
