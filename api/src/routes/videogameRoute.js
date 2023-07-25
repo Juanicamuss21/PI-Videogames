@@ -61,7 +61,7 @@ router.post('/videogames', async (req, res) => {
         const newVideoGame = await Videogame.findOne({
             where: {name: name},
             include: {model: Genre}
-           })
+        })
 
         res.status(200).send(newVideoGame)
 
