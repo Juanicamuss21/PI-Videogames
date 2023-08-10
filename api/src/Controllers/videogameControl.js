@@ -1,4 +1,4 @@
-import axios from 'axios'
+const axios = require('axios')
 const {Videogame, Genre} = require('../db.js')
 const {APY_KEY} = process.env;
 const BASE_URL = 'https://api.rawg.io/api/games';
