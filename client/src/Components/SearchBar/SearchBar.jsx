@@ -5,9 +5,11 @@ import { Toaster} from "react-hot-toast";
 import { useState } from 'react'
 import * as actions from "../../Redux/Actions"
 import {FaSearch} from "react-icons/fa";
+import { useLocation } from "react-router-dom"
 
 export default function SearchBar({handleSort, handleRating, handleGenre, handleCreated, SetCurrentPage}){
 
+    const location = useLocation().pathname
     const dispatch = useDispatch()
     const allGenres = useSelector(state => state.allGenres)
 
@@ -24,21 +26,29 @@ export default function SearchBar({handleSort, handleRating, handleGenre, handle
       SetCurrentPage(1)
       setName("")
     }
+
+    function handleKeyDown (event) {
+      if (event.key === 'Enter') {
+        handleSubmit()
+      }
+    }
    
     return (     
 
         <div className='c-div'>
 
-        <div className='input-total'> 
+          <div className={location === '/home'? 'input-total' : 'input-invisible'}> 
             <input
              type="text"
              value={name}
              placeholder='Search...'
              onChange={(e) => handleInputChange(e)}
              className="input-search"
+             onKeyDown={(e) => handleKeyDown(e)}
             />
             <button className='btn__search' type='submit' onClick={(e) => handleSubmit(e)}><FaSearch className='btn__search-icon'/></button>
         </div>
+
 
         <div className='search-bar'>
         <select className='s-bt'  onChange={(e) => handleGenre(e)}>
